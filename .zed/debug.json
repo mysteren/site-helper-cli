@@ -1,0 +1,16 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "label": "python (Debugpy) diff investsteel.ru",
+    "adapter": "Debugpy",
+    // "program": "src/main.py",
+    "python": "./venv/bin/python",
+    "module": "src.main",
+    "args": ["diff", "investsteel.ru"],
+    "request": "launch",
+    "cwd": "/home/timofey/ws/pj/site-helper",
+  },
+]
