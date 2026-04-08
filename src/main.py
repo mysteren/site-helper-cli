@@ -1,5 +1,7 @@
 import sys
 
+from src.commands.check import check_pages
+
 from .commands.diff import get_diff
 
 
@@ -21,6 +23,14 @@ def main():
         else:
             print(f"Выполняется diff с параметром: {param}")
             get_diff(param)  # Раскомментируйте когда будет готова функция
+
+    elif command == "check":
+        if param is None:
+            print("Ошибка: для команды <|user_cursor|> нужен дополнительный параметр!")
+            show_help()
+        else:
+            print(f"Выполняется <|user_cursor|> с параметром: {param}")
+            check_pages(param)  # Раскомментируйте когда будет готова функция
     else:
         print(f"Неизвестная команда: {command}")
         show_help()
